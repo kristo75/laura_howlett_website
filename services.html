@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<title>Hair by Laura</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+    background-color: #f8f6f2;
+}
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("header.jpg");
+    min-height: 75%;
+}
+.menu {
+    display: none;
+}
+</style>
+
+
+<body>
+  <div class="w3-top">
+    <div class="w3-row w3-padding w3-black">
+      <div class="w3-col s2">
+        <a href="index.html" class="w3-button w3-block w3-black">HOME</a>
+      </div>
+      <div class="w3-col s2">
+        <a href="about.html" class="w3-button w3-block w3-black">ABOUT</a>
+      </div>
+      <div class="w3-col s2">
+        <a href="gallery.html" class="w3-button w3-block w3-black">GALLERY</a>
+      </div>
+      <div class="w3-col s2">
+        <a href="#menu" class="w3-button w3-block w3-black">SERVICES</a>
+      </div>
+      <div class="w3-col s2">
+        <a href="contact.html" class="w3-button w3-block w3-black">CONTACT</a>
+      </div>
+      <div class="w3-col s2">
+        <a href="testimonial.html" class="w3-button w3-block w3-black">TESTIMONIALS</a>
+      </div>
+    </div>
+  </div>
+  <!-- Menu Container -->
+  <div class="w3-container" id="menu">
+    <div class="w3-content" style="max-width:700px">
+
+      <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">SERVICES</span></h5>
+
+      <div class="w3-row w3-center w3-card w3-padding">
+        <a href="javascript:void(0)" onclick="openMenu(event, 'She');" id="myLink">
+          <div class="w3-col s6 tablink">She</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'He');">
+          <div class="w3-col s6 tablink">He</div>
+        </a>
+      </div>
+
+      <div id="She" class="w3-container menu w3-padding-48 w3-card">
+        <h5>Cut and Style</h5>
+        <p class="w3-text-grey">Cut and style with relaxing head massage
+          1 hour 30 mins</p><br>
+
+        <h5>Hair Braiding</h5>
+        <p class="w3-text-grey">Full set of braids 2 hours</p><br>
+
+
+      </div>
+
+      <div id="He" class="w3-container menu w3-padding-48 w3-card">
+        <h5>Cut and Style</h5>
+        <p class="w3-text-grey">45 mins</p><br>
+
+        <h5>Hot Shave</h5>
+        <p class="w3-text-grey">30 mins</p><br>
+
+        <h5>Beard Trim</h5>
+        <p class="w3-text-grey">25 mins</p><br>
+
+      </div>
+      <img src="he.jpeg" style="width:100%;max-width:1000px;margin-top:32px;">
+    </div>
+  </div>
+
+  <script>
+  <!-- // Tabbed Menu -->
+  function openMenu(evt, menuName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("menu");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+       tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+    }
+    document.getElementById(menuName).style.display = "block";
+    evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+  }
+  document.getElementById("myLink").click();
+
+
+
+  </script>
